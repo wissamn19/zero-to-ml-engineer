@@ -76,6 +76,6 @@ Every topic folder contains two files:
 
 *Built with curiosity, coffee, and a stubborn refusal to stay a beginner.*
 
-⭐ Star this repo if it helps you too
+⭐ **Star this repo if it helps you too**
 
 </div>
