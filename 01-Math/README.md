@@ -21,7 +21,7 @@ Linear Algebra, Statistics, and Calculus are the mathematical backbone of every 
 ## 📖 Resources
 
 See the full list of books, courses, and free materials → 
-- [Linear Algebra](./resources.md)
+- [Linear Algebra](./Linear_Algebra/Resources.md)
 - [Statistics](./resources.md)
 - [Calculus](./resources.md)
 
