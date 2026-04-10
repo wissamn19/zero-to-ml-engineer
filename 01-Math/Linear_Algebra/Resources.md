@@ -26,3 +26,12 @@
 
 - [Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) — MIT OpenCourseWare  
   Gilbert Strang's legendary course. More rigorous and in-depth than what you need at the start, but invaluable once you want to go deeper. Lectures, problem sets, and exams all free.
+
+
+
+## 🌐 Medium Articles
+
+- [The Geometry of Uncertainty: Why Statistics is Actually Linear Algebra](https://medium.com/@tomkob99_89317/the-geometry-of-uncertainty-why-statistics-is-actually-linear-algebra-b525c008c31b) — Tomio Kobayashi 
+  A short, eye-opening read that shows how core statistics concepts like mean, variance, and correlation are really just linear algebra in disguise — using geometric intuition (vectors, projections, decomposition) rather than formulas. Great for building the bridge between the two subjects.
+
+  
