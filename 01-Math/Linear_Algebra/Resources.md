@@ -31,7 +31,8 @@
 
 ## 🌐 Medium Articles
 
-- [The Geometry of Uncertainty: Why Statistics is Actually Linear Algebra](https://medium.com/@tomkob99_89317/the-geometry-of-uncertainty-why-statistics-is-actually-linear-algebra-b525c008c31b) — Tomio Kobayashi 
+- [The Geometry of Uncertainty: Why Statistics is Actually Linear Algebra](https://medium.com/@tomkob99_89317/the-geometry-of-uncertainty-why-statistics-is-actually-linear-algebra-b525c008c31b) — Tomio Kobayashi
+  
   A short, eye-opening read that shows how core statistics concepts like mean, variance, and correlation are really just linear algebra in disguise — using geometric intuition (vectors, projections, decomposition) rather than formulas. Great for building the bridge between the two subjects.
 
   
