@@ -38,7 +38,7 @@
 
 - [My Understanding of Linear Algebra](https://medium.com/@syazah/my-understanding-of-linear-algebra-b13bd5e65bf5) — Azaan Ahmad
   
-  A beginner's honest walkthrough of linear algebra. Covers vectors, span, linear transformations, determinants, eigenvalues and more, all explained with intuition first and formulas second. A good companion read alongside **3Blue1Brown**.
+  A beginner's honest walkthrough of linear algebra. Covers vectors, span, linear transformations, determinants, eigenvalues, and more, all explained with intuition first and formulas second. A good companion read alongside the **3Blue1Brown** course.
   
 
   
