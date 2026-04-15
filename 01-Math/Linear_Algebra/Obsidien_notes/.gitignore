@@ -1,1 +1,20 @@
+# Obsidian cache & workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
 
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.log
+
+# Keep these (your actual config)
+!.obsidian/app.json
+!.obsidian/templates.json
+!.obsidian/daily-notes.json
+!.obsidian/core-plugins.json
