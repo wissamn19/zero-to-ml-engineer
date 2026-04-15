@@ -1,1 +1,0 @@
-![[Attachments/Topic 03 — Determinant]]
