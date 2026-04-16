@@ -6,12 +6,12 @@
 
 ---
 
-## 📌 Summary
+# Summary
 Cramer's Rule is a way to solve linear equations geometrically using determinants.
 
 ---
 
-## 🧠 Core Idea
+# Core Idea
 
 > It's a way to **solve linear equations** geometrically.
 
@@ -30,7 +30,7 @@ If $T(\vec{v}) \cdot T(\vec{w}) = \vec{v} \cdot \vec{w}$ for all $\vec{v}$ and $
 
 ---
 
-## 🔗 Related Topics
+## Related Topics
 - [[Topic 07 — Cross Product]]
 - [[Topic 09 — Change of Basis]]
 
