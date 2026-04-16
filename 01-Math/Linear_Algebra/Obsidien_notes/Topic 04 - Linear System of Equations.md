@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Summary
+# Summary
 One of the core uses of matrices is to solve systems of equations. This reduces to finding the inverse matrix $A^{-1}$ such that $A\vec{x} = \vec{v}$.
 
 ---
@@ -60,7 +60,7 @@ $$A^{-1}A\vec{x} = A^{-1}\vec{v} \Rightarrow \text{The "do nothing" matrix}$$
 
 ---
 
-## 🔗 Related Topics
+## Related Topics
 - [[Topic 02 — Matrices]]
 - [[Topic 03 — Determinant]]
 - [[Topic 05 — Non-Square Matrix as Transformation]]
