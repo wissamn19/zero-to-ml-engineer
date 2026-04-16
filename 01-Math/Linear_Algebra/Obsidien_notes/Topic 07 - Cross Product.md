@@ -6,12 +6,12 @@
 
 ---
 
-## 📌 Summary
+# Summary
 The cross product of two 3D vectors gives a new 3D vector perpendicular to both, with magnitude equal to the area of the parallelogram they form.
 
 ---
 
-## 🧠 Core Idea
+# Core Idea
 
 The cross product between $\vec{v}$ and $\vec{w}$ is written as:
 
@@ -41,7 +41,7 @@ The result is **perpendicular to each other and still with unit lengths**.
 
 ---
 
-## 📐 Area Formula
+# Area Formula
 
 $$\text{Area} = \det(A) \cdot y$$
 
@@ -51,7 +51,7 @@ $$\text{Area} = 1 \times x, \quad x = \frac{\text{Area}}{\det(A)} = \frac{\det\b
 
 ---
 
-## 🔗 Related Topics
+## Related Topics
 - [[Topic 06 — Dot Product and Duality]]
 - [[Topic 08 — Cramer's Rule]]
 
