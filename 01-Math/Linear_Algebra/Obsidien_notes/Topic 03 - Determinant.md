@@ -6,12 +6,12 @@
 
 ---
 
-## 📌 Summary
+# Summary
 The determinant measures **how much a linear transformation scales areas**. It can be negative (flipping orientation) and zero means the transformation squishes space into a lower dimension.
 
 ---
 
-## 🧠 Core Idea
+# Core Idea
 
 - *How much are areas scaled?*
 - The linear transformation scales its area
@@ -19,7 +19,7 @@ The determinant measures **how much a linear transformation scales areas**. It c
 
 ---
 
-## 📐 Formula
+# Formula
 
 ### 2×2 Matrix:
 $$\det\left(\begin{bmatrix} a & b \\ c & d \end{bmatrix}\right) = ad - bc$$
@@ -29,7 +29,7 @@ $$\det\left(\begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix}\ri
 
 ---
 
-## ⚠️ Notes
+# Notes
 - The determinant **can be negative** because of the scaling (flipping orientation)
 - **Question:** $\det(M_1 M_2) = \det(M_1) \cdot \det(M_2)$
   - → Applying two transformations in sequence multiplies their area-scaling factors
@@ -37,7 +37,7 @@ $$\det\left(\begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix}\ri
 
 ---
 
-## 🔗 Related Topics
+## Related Topics
 - [[Topic 02 — Matrices]]
 - [[Topic 04 — Linear System of Equations]]
 
