@@ -47,7 +47,7 @@ Multiplying a vector by a number will **increase or reduce the length** of the v
 
 ---
 
-## 🧭 Basis Vectors
+# Basis Vectors
 - Noted $\hat{i}$ and $\hat{j}$ of the xy coordinate system
 - Any vector is a **linear combination** of basis vectors:
 
@@ -55,7 +55,7 @@ $$a\vec{v} + b\vec{w}$$
 
 ---
 
-## 🌐 The Span
+# The Span
 > The span of $\vec{v}$ and $\vec{w}$ is the **set of all their linear combinations** $a\vec{v} + b\vec{w}$
 
 For 3D:
