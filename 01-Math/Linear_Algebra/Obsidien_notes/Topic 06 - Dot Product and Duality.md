@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Summary
+# Summary
 The dot product measures how aligned two vectors are. Duality connects the dot product to linear transformations from space to the number line.
 
 ---
@@ -34,7 +34,7 @@ A **1×2 matrix** ↔ **2D vectors** → Matrix-vector product ⟺ Dot product
 
 ---
 
-## 🔗 Related Topics
+## Related Topics
 - [[Topic 05 — Non-Square Matrix]]
 - [[Topic 07 — Cross Product]]
 

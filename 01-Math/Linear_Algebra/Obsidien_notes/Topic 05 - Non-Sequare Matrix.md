@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Summary
+# Summary
 A non-square matrix (e.g. 2×3) transforms vectors between spaces of different dimensions.
 
 ---
@@ -21,7 +21,7 @@ Defined as a **2×3 matrix**, where the 3 vectors are the basis vectors $\hat{i}
 
 ---
 
-## 🔗 Related Topics
+## Related Topics
 - [[Topic 04 — Linear System of Equations]]
 - [[Topic 06 — Dot Product and Duality]]
 

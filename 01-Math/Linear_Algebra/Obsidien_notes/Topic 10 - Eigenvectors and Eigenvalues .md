@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Summary
+# Summary
 Eigenvectors are special vectors that stay on their own span after a linear transformation. Eigenvalues are the factor by which they get stretched or squished.
 
 ---
@@ -19,7 +19,7 @@ Eigenvectors are special vectors that stay on their own span after a linear tran
 
 ---
 
-## 📐 Symbolically
+# Symbolically
 
 $$A\vec{v} = \lambda\vec{v} \quad \rightarrow \text{Eigenvalue}$$
 
@@ -31,7 +31,7 @@ $$A\vec{v} = \lambda\vec{v} \quad \rightarrow \text{Eigenvalue}$$
 
 ---
 
-## 🔍 Seeking Eigenvalue $\lambda$
+# Seeking Eigenvalue $\lambda$
 
 $$A\vec{v} = \lambda\vec{v}$$
 $$A\vec{v} - \lambda I\vec{v} = 0$$
@@ -66,14 +66,14 @@ $$\lambda = 3 \quad \text{or} \quad \lambda = 2$$
 
 ---
 
-## 🔢 Or Complex Numbers
+# Or Complex Numbers
 
 $$\det\left(\begin{bmatrix} -\lambda & 1 \\ 1 & -\lambda \end{bmatrix}\right) = (-\lambda)(-\lambda) - 1 = \lambda^2 - 1 = 0$$
 $$\lambda = i \quad \text{or} \quad \lambda = -i$$
 
 ---
 
-## 📏 Eigenbasis
+# Eigenbasis
 > It's the same concept for the **change of basis**.
 
 We use our eigenvectors as basis (new one) — **Diagonal**:
@@ -101,7 +101,7 @@ where $m$ = mean of diagonal, $p$ = product (determinant).
 
 ---
 
-## 💡 Finding Eigenvalues — Example
+# inding Eigenvalues — Example
 
 We call the mean $(m)$ which is the trace, and the det as $(p)$ for product.
 
@@ -125,7 +125,7 @@ $$d^2 = m^2 - p \quad \Rightarrow \quad \lambda_{1,2} = m \pm \sqrt{m^2 - p}$$
 
 ---
 
-## 📊 Find the Eigenvalues of $\begin{bmatrix} 3 & 1 \\ 4 & 1 \end{bmatrix}$
+# Find the Eigenvalues of $\begin{bmatrix} 3 & 1 \\ 4 & 1 \end{bmatrix}$
 
 $$\det\left(\begin{bmatrix} 3-\lambda & 1 \\ 4 & 1-\lambda \end{bmatrix}\right) = (3-\lambda)(1-\lambda) - 4(1)$$
 $$= (3 - 3\lambda - \lambda + \lambda^2) - 4$$
@@ -136,7 +136,7 @@ $$\lambda_{1,2} = \frac{4 \pm \sqrt{4^2 - 4(1)(-1)}}{2} = \frac{4 \pm \sqrt{20}}
 
 ---
 
-## 🔗 Related Topics
+## Related Topics
 - [[Topic 09 — Change of Basis]]
 - [[Topic 02 — Matrices]]
 

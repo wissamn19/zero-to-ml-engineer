@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Summary
+# Summary
 A matrix encodes a linear transformation. Matrix multiplication represents the composition of two transformations applied in sequence (read right to left).
 
 ---
