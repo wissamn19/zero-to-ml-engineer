@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 Zero to ML Engineer
+#  Zero to ML Engineer
 
 > A structured, self-paced roadmap for going from complete beginner to job-ready Machine Learning Engineer —  
 > built in public, one topic at a time.
@@ -13,7 +13,7 @@
 
 ---
 
-## 👋 What is this?
+##  What is this?
 
 This is my personal ML Engineer roadmap — a living repository where I document everything I learn on the journey from **zero** to becoming a **Machine Learning Engineer**.
 
@@ -23,35 +23,35 @@ If you're on a similar path, feel free to fork it and make it your own.
 
 ---
 
-## 🗺️ Roadmap Overview
+##  Roadmap Overview
 
 ```mermaid
 flowchart LR
-    A[📐 Math] --> B[🐍 Python]
-    B --> C[🗄️ SQL]
-    C --> D[🧠 Machine Learning]
-    D --> E[🔥 Deep Learning]
-    E --> F[⚙️ Software Engineering]
-    F --> G[🚀 MLOps]
+    A[ Math] --> B[ Python]
+    B --> C[ SQL]
+    C --> D[ Machine Learning]
+    D --> E[ Deep Learning]
+    E --> F[ Software Engineering]
+    F --> G[ MLOps]
 ```
 
 ---
 
-## ✅ Progress Tracker
+##  Progress Tracker
 
 | Phase | Topics | Status |
 |-------|--------|--------|
-| [📐 01 - Math](./01-Math/README.md) | Linear Algebra, Statistics, Calculus | 🔄 In Progress |
-| 🐍 02 - Python | Data Structures, OOP, NumPy, Pandas | ⬜ Not Started |
-| 🗄️ 03 - SQL | Queries, Joins, Aggregations | ⬜ Not Started |
-| 🧠 04 - Machine Learning | Regression, Trees, Clustering, Evaluation | ⬜ Not Started |
-| 🔥 05 - Deep Learning | Neural Networks, CNNs, RNNs, Transformers | ⬜ Not Started |
-| ⚙️ 06 - Software Engineering | DSA, System Design, APIs | ⬜ Not Started |
-| 🚀 07 - MLOps | Cloud, Docker, Git & CI/CD | ⬜ Not Started |
+| [ 01 - Math](./01-Math/README.md) | Linear Algebra, Statistics, Calculus | 🔄 In Progress |
+|  02 - Python | Data Structures, OOP, NumPy, Pandas | ⬜ Not Started |
+|  03 - SQL | Queries, Joins, Aggregations | ⬜ Not Started |
+|  04 - Machine Learning | Regression, Trees, Clustering, Evaluation | ⬜ Not Started |
+|  05 - Deep Learning | Neural Networks, CNNs, RNNs, Transformers | ⬜ Not Started |
+|  06 - Software Engineering | DSA, System Design, APIs | ⬜ Not Started |
+|  07 - MLOps | Cloud, Docker, Git & CI/CD | ⬜ Not Started |
 
 ---
 
-## 🧱 How Each Topic is Documented
+##  How Each Topic is Documented
 
 Every topic folder contains two files:
 
@@ -60,7 +60,7 @@ Every topic folder contains two files:
 
 ---
 
-## 🛠️ Tools & Stack
+##  Tools & Stack
 
 | Purpose | Tool |
 |---------|------|
