@@ -42,7 +42,7 @@ flowchart LR
 | Phase | Topics | Status |
 |-------|--------|--------|
 | [ 01 - Math](./01-Math/README.md) | Linear Algebra, Statistics, Calculus | 🔄 In Progress |
-|  02 - Python | Data Structures, OOP, NumPy, Pandas | ⬜ Not Started |
+|  [02 - Python](./02-Python/README.md) | Data Structures, OOP, NumPy, Pandas | 🔄 In Progress|
 |  03 - SQL | Queries, Joins, Aggregations | ⬜ Not Started |
 |  04 - Machine Learning | Regression, Trees, Clustering, Evaluation | ⬜ Not Started |
 |  05 - Deep Learning | Neural Networks, CNNs, RNNs, Transformers | ⬜ Not Started |
