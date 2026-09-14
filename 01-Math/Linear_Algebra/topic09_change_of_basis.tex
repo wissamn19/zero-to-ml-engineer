@@ -1,0 +1,38 @@
+\section{Change of Basis}
+\label{sec:change-of-basis}
+
+\noindent\textbf{Subject:} Linear Algebra for ML (3Blue1Brown) \\
+\textbf{Status:} growing
+
+\subsection*{Summary}
+Change of basis is like speaking in another language --- it's a matrix whose columns represent the change of basis vectors, thought of as a transformation that moves our basis vectors.
+
+\subsection{Core Idea}
+
+\begin{defbox}
+It's like \textbf{speaking in another language}.
+\end{defbox}
+
+A matrix whose \textbf{columns represent the change of basis vectors} can be thought of as a transformation that moves our basis vectors.
+
+$\rightarrow$ We need to \textbf{inverse the vectors} (new basis) $\begin{bmatrix} 2 & -1 \\ 1 & 1 \end{bmatrix}$ --- the inverse transformation is a new transformation.
+
+\subsection{To Translate a Matrix}
+
+\[
+\underbrace{\begin{bmatrix} 2 & -1 \\ 1 & 1 \end{bmatrix}}_{\text{Inverse change of basis}}
+\underbrace{\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}}_{\text{Transformation matrix in our language}}
+\underbrace{\begin{bmatrix} 2 & -1 \\ 1 & 1 \end{bmatrix}^{-1}}_{\text{Change of basis matrix}}
+\underbrace{\begin{bmatrix} -1 \\ 2 \end{bmatrix}}_{\text{Start with any vector}}
+\]
+
+$\rightarrow$ Result: \textbf{Transformed vector in our language}
+
+\subsection*{Related Topics}
+\begin{itemize}[nosep]
+  \item Section~\ref{sec:cramers-rule} --- Cramer's Rule
+  \item Section~\ref{sec:eigen} --- Eigenvectors and Eigenvalues
+\end{itemize}
+
+\bigskip
+\noindent\textit{Tags: linear-algebra, change-of-basis, math, phase-1}

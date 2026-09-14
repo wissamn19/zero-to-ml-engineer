@@ -1,0 +1,48 @@
+\section{Dot Product and Duality}
+\label{sec:dot-product}
+
+\noindent\textbf{Subject:} Linear Algebra for ML (3Blue1Brown) \\
+\textbf{Status:} growing
+
+\subsection*{Summary}
+The dot product measures how aligned two vectors are. Duality connects the dot product to linear transformations from space to the number line.
+
+\subsection{Dot Product}
+
+\begin{defbox}
+When you multiply two vectors with the same dimension, each row is multiplied by the corresponding row of the other, then the results are added together.
+\end{defbox}
+
+\[
+\begin{bmatrix} 1 \\ 2 \end{bmatrix} \cdot \begin{bmatrix} 3 \\ 4 \end{bmatrix}
+= 1 \times 3 + 2 \times 4 = 11
+\quad \text{(Projection of a vector)}
+\]
+
+\paragraph{Interpretation:}
+\begin{itemize}[nosep]
+  \item If the dot product is \textbf{positive} $\rightarrow$ vectors are in the \textbf{same direction}
+  \item If the dot product is \textbf{0} $\rightarrow$ vectors are \textbf{perpendicular}
+  \item If the dot product is \textbf{negative} $\rightarrow$ vectors are in \textbf{opposite directions}
+\end{itemize}
+
+\[
+\vec{v} = \begin{bmatrix} 4 \\ 1 \end{bmatrix}
+\]
+
+A \textbf{$1\times2$ matrix} $\leftrightarrow$ \textbf{2D vectors} $\rightarrow$ Matrix-vector product $\Leftrightarrow$ Dot product
+
+\subsection{Duality}
+
+\begin{defbox}
+Duality of a vector is the \textbf{linear transformation that it encodes} --- a unique vector in which the linear transformation goes from space to the number line.
+\end{defbox}
+
+\subsection*{Related Topics}
+\begin{itemize}[nosep]
+  \item Section~\ref{sec:non-square} --- Non-Square Matrix
+  \item Section~\ref{sec:cross-product} --- Cross Product
+\end{itemize}
+
+\bigskip
+\noindent\textit{Tags: linear-algebra, dot-product, duality, math, phase-1}

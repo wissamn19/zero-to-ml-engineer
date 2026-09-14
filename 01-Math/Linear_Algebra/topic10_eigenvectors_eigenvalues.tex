@@ -1,0 +1,205 @@
+\section{Eigenvectors and Eigenvalues}
+\label{sec:eigen}
+
+\noindent\textbf{Subject:} Linear Algebra for ML (3Blue1Brown) \\
+\textbf{Status:} growing
+
+\subsection*{Summary}
+Eigenvectors are special vectors that stay on their own span after a linear transformation. Eigenvalues are the factor by which they get stretched or squished.
+
+\subsection{Eigenvectors}
+\begin{defbox}
+Any vector whose \textbf{span stays the same} after the linear transformation.
+\end{defbox}
+
+\subsection{Eigenvalues}
+\begin{defbox}
+Just the \textbf{factor by which it's stretched or squished} during the linear transformation.
+\end{defbox}
+
+\subsection{Symbolically}
+
+\[
+A\vec{v} = \lambda\vec{v} \quad \rightarrow \text{Eigenvalue}
+\]
+
+\begin{itemize}[nosep]
+  \item $A$ = transformation matrix (matrix-vector multiplication)
+  \item $\vec{v}$ = eigenvector
+  \item $\lambda$ = eigenvalue (scalar)
+\end{itemize}
+
+\begin{notebox}
+It says that the \textbf{matrix-vector multiplication} gives the same result as just \textbf{scaling the eigenvector} $\vec{v}$ by some value $\lambda$.
+\end{notebox}
+
+\subsection{Seeking Eigenvalue $\lambda$}
+
+\[
+A\vec{v} = \lambda\vec{v}
+\]
+\[
+A\vec{v} - \lambda I\vec{v} = 0
+\]
+\[
+(A - \lambda I)\vec{v} = 0
+\]
+\[
+\det(A - \lambda I) = 0
+\]
+
+Matrix multiplication by $\lambda$:
+
+\[
+\begin{bmatrix} \lambda & 0 & 0 \\ 0 & \lambda & 0 \\ 0 & 0 & \lambda \end{bmatrix}
+\Rightarrow
+\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+\]
+
+We want a \textbf{non-zero solution} for $\vec{v}$:
+\begin{itemize}[nosep]
+  \item ``Squishification'' $\rightarrow$ $\det(A - \lambda I) = 0$
+  \item This matrix will look like: $\begin{bmatrix} 3-\lambda & 1 & 4 \\ 1 & 5-\lambda & 9 \\ 2 & 6 & 5-\lambda \end{bmatrix}$
+\end{itemize}
+
+$\rightarrow$ So the $\lambda$ value should be 1, meaning this value keeps the vector on a line.
+
+\paragraph{Steps:}
+\begin{enumerate}[nosep]
+  \item $A\vec{v} = \lambda\vec{v}$
+  \item $A\vec{v} - \lambda I\vec{v} = 0$
+  \item $(A - \lambda I)\vec{v} = 0$
+  \item $\det(A - \lambda I) = 0$
+\end{enumerate}
+
+\paragraph{Example:}
+\[
+\det\left(\begin{bmatrix} 3-\lambda & 1 \\ 0 & 2-\lambda \end{bmatrix}\right) = (3-\lambda)(2-\lambda) - 0 \cdot 1
+\]
+
+This is a \textbf{quadratic polynomial in $\lambda$}.
+
+\[
+(3-\lambda)(2-\lambda) = 0
+\]
+\[
+\lambda = 3 \quad \text{or} \quad \lambda = 2
+\]
+
+\begin{notebox}
+Some vectors don't have an eigenvalue (e.g.\ a 90\textdegree{} rotation).
+\end{notebox}
+
+\subsection{Or Complex Numbers}
+
+\[
+\det\left(\begin{bmatrix} -\lambda & 1 \\ 1 & -\lambda \end{bmatrix}\right) = (-\lambda)(-\lambda) - 1 = \lambda^2 - 1 = 0
+\]
+\[
+\lambda = i \quad \text{or} \quad \lambda = -i
+\]
+
+\subsection{Eigenbasis}
+\begin{defbox}
+It's the same concept as the \textbf{change of basis}.
+\end{defbox}
+
+We use our eigenvectors as the (new) basis --- \textbf{Diagonal}:
+
+\[
+\begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix}^{-1}
+\begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix}
+\begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix}
+=
+\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}
+\]
+
+$\rightarrow$ Change of basis matrix
+
+\subsection{Some Facts to Know}
+
+\paragraph{1) Trace:}
+\[
+\operatorname{Tr}\left(\begin{bmatrix} a & b \\ c & d \end{bmatrix}\right) = a + d = \lambda_1 + \lambda_2
+\]
+\[
+\frac{1}{2}\operatorname{Tr}\left(\begin{bmatrix} a & b \\ c & d \end{bmatrix}\right) = \frac{a+d}{2} = \frac{\lambda_1 + \lambda_2}{2}
+\]
+\[
+\text{mean}(a,d) = \text{mean}(\lambda_1, \lambda_2)
+\]
+
+\paragraph{2) Determinant:}
+\[
+\det\left(\begin{bmatrix} a & b \\ c & d \end{bmatrix}\right) = ad - bc = \lambda_1 \lambda_2
+\]
+
+\paragraph{3) Eigenvalue shortcut:}
+\[
+\lambda_1, \lambda_2 = m \pm \sqrt{m^2 - p}
+\]
+where $m$ = mean of the diagonal, $p$ = product (determinant).
+
+\subsection{Finding Eigenvalues --- Example}
+
+We call the mean $(m)$ the trace, and the determinant $(p)$ the product.
+
+\paragraph{Find the distance:}
+\[
+\begin{bmatrix} 8 & 4 \\ 2 & 6 \end{bmatrix} \quad m = 7, \quad p = 40
+\]
+
+\[
+40 = (7-d)(7+d)
+\]
+\[
+40 = 7^2 - d^2
+\]
+\[
+d^2 = 7^2 - 40 \Rightarrow d^2 = 9 \Rightarrow d = 3
+\]
+
+So:
+\[
+\lambda_{1,2} = m \pm d = 7 \pm 3 \Rightarrow \lambda_1 = 4, \quad \lambda_2 = 10
+\]
+
+\paragraph{General formula:}
+\[
+d^2 = m^2 - p \quad \Rightarrow \quad \lambda_{1,2} = m \pm \sqrt{m^2 - p}
+\]
+
+\paragraph{Example:} $x^2 - 10x + 9 = 5$, so for $x^2 - 10x + 9$:
+\begin{itemize}[nosep]
+  \item Mean = 5
+  \item $(x - \lambda_1)(x - \lambda_2)$
+  \item $x^2 - (\lambda_1 + \lambda_2)x + \lambda_1\lambda_2$ $\rightarrow$ $m$ (sum), product
+\end{itemize}
+
+\subsection{Find the Eigenvalues of $\begin{bmatrix} 3 & 1 \\ 4 & 1 \end{bmatrix}$}
+
+\[
+\det\left(\begin{bmatrix} 3-\lambda & 1 \\ 4 & 1-\lambda \end{bmatrix}\right) = (3-\lambda)(1-\lambda) - 4(1)
+\]
+\[
+= (3 - 3\lambda - \lambda + \lambda^2) - 4
+\]
+\[
+= (3 - 4\lambda + \lambda^2) - 4
+\]
+\[
+= \lambda^2 - 4\lambda - 1 = 0
+\]
+
+\[
+\lambda_{1,2} = \frac{4 \pm \sqrt{4^2 - 4(1)(-1)}}{2} = \frac{4 \pm \sqrt{20}}{2} = 2 \pm \sqrt{5}
+\]
+
+\subsection*{Related Topics}
+\begin{itemize}[nosep]
+  \item Section~\ref{sec:change-of-basis} --- Change of Basis
+  \item Section~\ref{sec:matrices} --- Matrices
+\end{itemize}
+
+\bigskip
+\noindent\textit{Tags: linear-algebra, eigenvectors, eigenvalues, eigenbasis, math, phase-1}

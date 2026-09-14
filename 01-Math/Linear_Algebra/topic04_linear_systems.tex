@@ -1,0 +1,84 @@
+\section{Linear System of Equations}
+\label{sec:linear-systems}
+
+\noindent\textbf{Subject:} Linear Algebra for ML (3Blue1Brown) \\
+\textbf{Status:} growing
+
+\subsection*{Summary}
+One of the core uses of matrices is to solve systems of equations. This reduces to finding the inverse matrix $A^{-1}$ such that $A\vec{x} = \vec{v}$.
+
+\subsection{System of Equations}
+
+One of the uses of matrices is to \textbf{solve systems of equations}.
+
+\paragraph{Example:}
+\[
+6x - 3y + 2z = 7
+\]
+\[
+x + 2y + 5z = 0
+\]
+\[
+2x - 8y - z = -2
+\]
+
+Which is:
+\[
+\underbrace{\begin{bmatrix} 6 & -3 & 2 \\ 1 & 2 & 5 \\ 2 & -8 & -1 \end{bmatrix}}_{A}
+\underbrace{\begin{bmatrix} x \\ y \\ z \end{bmatrix}}_{\vec{x}}
+=
+\underbrace{\begin{bmatrix} 7 \\ 0 \\ -2 \end{bmatrix}}_{\vec{v}}
+\]
+
+So now we have:
+\[
+A\vec{x} = \vec{v}
+\]
+
+\subsection{Inverse Matrix --- $A^{-1}$}
+
+\begin{defbox}
+$A^{-1}$ is a unique transformation with the property that if you first apply $A$ then $A^{-1}$, you end up right where you started. $(A A^{-1})$ --- this is called the \textbf{identity transformation}.
+\end{defbox}
+
+\[
+A^{-1}A\vec{x} = A^{-1}\vec{v} \Rightarrow \text{The ``do nothing'' matrix}
+\]
+
+\begin{itemize}[nosep]
+  \item If $\det(A) \neq 0 \Rightarrow A^{-1}$ exists
+  \item If $\det(A) = 0 \Rightarrow$ No $A^{-1}$
+\end{itemize}
+
+\subsection{Rank}
+
+\begin{defbox}
+When the output of a transformation is a \textbf{line}, the transformation has a \textbf{rank of one}.
+\end{defbox}
+
+\begin{itemize}[nosep]
+  \item For a two-dimensional plane $\rightarrow$ rank of two
+  \item The rank = the \textbf{number of dimensions in the output} of the transformation (column space)
+\end{itemize}
+
+\subsection{Column Space}
+
+\begin{defbox}
+The set of \textbf{all possible outputs} of the matrix --- it's called the column space.
+\end{defbox}
+
+\subsection{Null Space or ``Kernel''}
+
+\begin{defbox}
+The space of \textbf{all vectors that become null} (zero vector) after the transformation.
+\end{defbox}
+
+\subsection*{Related Topics}
+\begin{itemize}[nosep]
+  \item Section~\ref{sec:matrices} --- Matrices
+  \item Section~\ref{sec:determinant} --- Determinant
+  \item Section~\ref{sec:non-square} --- Non-Square Matrix as Transformation
+\end{itemize}
+
+\bigskip
+\noindent\textit{Tags: linear-algebra, systems-of-equations, inverse-matrix, rank, math, phase-1}

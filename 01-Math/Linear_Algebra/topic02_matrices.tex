@@ -1,0 +1,104 @@
+\section{Matrices}
+\label{sec:matrices}
+
+\noindent\textbf{Subject:} Linear Algebra for ML (3Blue1Brown) \\
+\textbf{Status:} growing
+
+\subsection*{Summary}
+A matrix encodes a linear transformation. Matrix multiplication represents the composition of two transformations applied in sequence (read right to left).
+
+\subsection{Linear Transformation}
+
+\begin{defbox}
+Transformation is a fancy word for \textbf{function} --- it takes an input and spits out an output.
+\end{defbox}
+
+\paragraph{What makes it \emph{Linear}?} Two properties:
+\begin{enumerate}[nosep]
+  \item All lines must remain lines \textbf{without getting curved}
+  \item The \textbf{origin must remain fixed} in place
+\end{enumerate}
+
+$\rightarrow$ So a Linear Transformation is one that \textbf{keeps grid lines parallel and evenly spaced}.
+
+\paragraph{How to describe one numerically?}
+\begin{itemize}[nosep]
+  \item We need to record where the basis vectors $\hat{i}$ and $\hat{j}$ land
+  \item To find where \textbf{any} vector lands, use:
+\end{itemize}
+
+\[
+\begin{bmatrix} x \\ y \end{bmatrix}
+\rightarrow
+x\begin{bmatrix} 1 \\ 0 \end{bmatrix} + y\begin{bmatrix} 0 \\ 1 \end{bmatrix}
+\Rightarrow
+x\begin{bmatrix} 1 \\ -2 \end{bmatrix} + y\begin{bmatrix} 3 \\ 0 \end{bmatrix}
+= \begin{bmatrix} 1x+3y \\ -2x+0y \end{bmatrix}
+\]
+
+You can use a \textbf{$2\times2$ matrix} for $\hat{i}$, $\hat{j}$:
+
+\[
+\begin{bmatrix} a & 3 \\ -2 & 0 \end{bmatrix}
+\]
+
+To find where a transformation takes the vector $\begin{bmatrix} 5 \\ 7 \end{bmatrix}$, apply:
+
+\[
+5\begin{bmatrix} 1 \\ -2 \end{bmatrix} + 7\begin{bmatrix} 3 \\ 0 \end{bmatrix}
+\]
+
+\paragraph{What is ``Shear''?}
+\begin{defbox}
+It's a kind of transformation to the basis vectors (skewing the grid).
+\end{defbox}
+
+\paragraph{What is ``Composition''?}
+\begin{defbox}
+Rotation and a shear combined.
+\end{defbox}
+
+To know where the vector ends up:
+
+\[
+\underbrace{\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}}_{\text{Shear}}
+\left(
+\underbrace{\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}}_{\text{Rotation}}
+\begin{bmatrix} x \\ y \end{bmatrix}
+\right)
+=
+\underbrace{\begin{bmatrix} 1 & -1 \\ 1 & 0 \end{bmatrix}}_{\text{Composition}}
+\begin{bmatrix} x \\ y \end{bmatrix}
+\]
+
+\begin{notebox}
+Read \textbf{right to left}.
+\end{notebox}
+
+\subsection{Matrix Multiplication}
+
+To multiply $M_1$ and $M_2$:
+
+\[
+\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+\begin{bmatrix} e & f \\ g & h \end{bmatrix}
+=
+\begin{bmatrix} ae+bg & af+bh \\ ce+dg & ac+dh \end{bmatrix}
+\]
+
+\begin{notebox}
+\begin{itemize}[nosep]
+  \item $M_1 \cdot M_2 \neq M_2 \cdot M_1$ (not commutative)
+  \item But: $(AB)C = A(BC)$ (associative \checkmark)
+\end{itemize}
+\end{notebox}
+
+\subsection*{Related Topics}
+\begin{itemize}[nosep]
+  \item Section~\ref{sec:vectors} --- Vectors
+  \item Section~\ref{sec:determinant} --- Determinant
+  \item Section~\ref{sec:linear-systems} --- Linear System of Equations
+\end{itemize}
+
+\bigskip
+\noindent\textit{Tags: linear-algebra, matrices, transformation, math, phase-1}

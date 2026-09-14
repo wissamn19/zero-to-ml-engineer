@@ -1,0 +1,44 @@
+\section{Cramer's Rule}
+\label{sec:cramers-rule}
+
+\noindent\textbf{Subject:} Linear Algebra for ML (3Blue1Brown) \\
+\textbf{Status:} growing
+
+\subsection*{Summary}
+Cramer's Rule is a way to solve linear equations geometrically using determinants.
+
+\subsection{Core Idea}
+
+\begin{defbox}
+It's a way to \textbf{solve linear equations} geometrically.
+\end{defbox}
+
+\[
+A \cdot x = B
+\]
+
+So geometrically it would look like:
+
+\[
+\begin{bmatrix} 3 & 2 \\ 4 & 2 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} -4 \\ -2 \end{bmatrix}
+\]
+
+\begin{itemize}[nosep]
+  \item $A$ = transformation matrix
+  \item Mystery input vector $\rightarrow$ transformed vector in our language
+\end{itemize}
+
+If $T(\vec{v}) \cdot T(\vec{w}) = \vec{v} \cdot \vec{w}$ for all $\vec{v}$ and $\vec{w}$:
+
+\begin{defbox}
+$T$ is \textbf{``Orthonormal''} --- it leaves all the basis vectors perpendicular with unit lengths.
+\end{defbox}
+
+\subsection*{Related Topics}
+\begin{itemize}[nosep]
+  \item Section~\ref{sec:cross-product} --- Cross Product
+  \item Section~\ref{sec:change-of-basis} --- Change of Basis
+\end{itemize}
+
+\bigskip
+\noindent\textit{Tags: linear-algebra, cramers-rule, math, phase-1}

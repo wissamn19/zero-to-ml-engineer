@@ -1,0 +1,51 @@
+\section{Determinant}
+\label{sec:determinant}
+
+\noindent\textbf{Subject:} Linear Algebra for ML (3Blue1Brown) \\
+\textbf{Status:} growing
+
+\subsection*{Summary}
+The determinant measures \textbf{how much a linear transformation scales areas}. It can be negative (flipping orientation) and zero means the transformation squishes space into a lower dimension.
+
+\subsection{Core Idea}
+\begin{itemize}[nosep]
+  \item \emph{How much are areas scaled?}
+  \item The linear transformation scales its area
+  \item The special scaling factor by which a linear transformation changes any area is called the \textbf{determinant}
+\end{itemize}
+
+\subsection{Formula}
+
+\paragraph{$2\times2$ Matrix:}
+\[
+\det\left(\begin{bmatrix} a & b \\ c & d \end{bmatrix}\right) = ad - bc
+\]
+
+\paragraph{$3\times3$ Matrix:}
+\[
+\det\left(\begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix}\right)
+= a \det\begin{bmatrix} e & f \\ h & i \end{bmatrix}
+- b \det\begin{bmatrix} d & f \\ g & i \end{bmatrix}
++ c \det\begin{bmatrix} d & e \\ g & h \end{bmatrix}
+\]
+
+\subsection{Notes}
+\begin{notebox}
+\begin{itemize}[nosep]
+  \item The determinant \textbf{can be negative} because of the scaling (flipping orientation)
+  \item \textbf{Question:} $\det(M_1 M_2) = \det(M_1) \cdot \det(M_2)$
+  \begin{itemize}[nosep]
+    \item $\rightarrow$ Applying two transformations in sequence multiplies their area-scaling factors
+    \item $\rightarrow$ The determinant is that scaling factor
+  \end{itemize}
+\end{itemize}
+\end{notebox}
+
+\subsection*{Related Topics}
+\begin{itemize}[nosep]
+  \item Section~\ref{sec:matrices} --- Matrices
+  \item Section~\ref{sec:linear-systems} --- Linear System of Equations
+\end{itemize}
+
+\bigskip
+\noindent\textit{Tags: linear-algebra, determinant, math, phase-1}

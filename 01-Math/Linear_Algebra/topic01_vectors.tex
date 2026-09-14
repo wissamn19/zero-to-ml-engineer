@@ -1,0 +1,105 @@
+\section{Vectors}
+\label{sec:vectors}
+
+\noindent\textbf{Subject:} Linear Algebra for ML (3Blue1Brown) \\
+\textbf{Status:} growing
+
+\subsection*{Summary}
+A vector is an arrow in space defined by its length and direction. It can be viewed from three perspectives: Physics, CS, and Math.
+
+\subsection{Perspectives on Vectors}
+
+\paragraph{Physics Perspective}
+\begin{itemize}[nosep]
+  \item Vectors are arrows pointing in space
+  \item Defined by a given vector's \textbf{length} and the \textbf{direction} it's pointing
+  \item Can be two-dimensional or three-dimensional
+\end{itemize}
+
+\paragraph{CS Perspective}
+\begin{itemize}[nosep]
+  \item Vectors are \textbf{ordered lists of numbers}
+\end{itemize}
+
+\paragraph{Math Perspective}
+\begin{itemize}[nosep]
+  \item A vector can be anything where there's a sensible notion of \textbf{adding two vectors} and \textbf{multiplying a vector by a number}
+\end{itemize}
+
+\subsection{Definition}
+\begin{defbox}
+A vector is an arrow inside a coordinate system, like the $xy$-plane, with its \textbf{tail at the origin}.
+\end{defbox}
+
+\[
+\vec{v} = \begin{bmatrix} -2 \\ 3 \end{bmatrix}
+\qquad
+\begin{bmatrix} -2 \\ -4 \\ y \end{bmatrix}
+\]
+
+\subsection{Vector Addition}
+To add two vectors, move one from its origin so the result is the sum of both vectors.
+
+\[
+\vec{v} = \begin{bmatrix} 1 \\ 2 \end{bmatrix} + \begin{bmatrix} 3 \\ -1 \end{bmatrix}
+= \begin{bmatrix} 1+3 \\ 2+(-1) \end{bmatrix}
+= \begin{bmatrix} 4 \\ 1 \end{bmatrix}
+\]
+
+\subsection{Vector Multiplication (Scaling)}
+Multiplying a vector by a number will \textbf{increase or reduce the length} of the vector.
+\begin{itemize}[nosep]
+  \item This is called \textbf{``Scaling''}
+  \item The numbers are called \textbf{``Scalars''}
+\end{itemize}
+
+\subsection{Basis Vectors}
+\begin{itemize}[nosep]
+  \item Noted $\hat{i}$ and $\hat{j}$ of the $xy$ coordinate system
+  \item Any vector is a \textbf{linear combination} of basis vectors:
+\end{itemize}
+
+\[
+a\vec{v} + b\vec{w}
+\]
+
+\subsection{The Span}
+\begin{defbox}
+The span of $\vec{v}$ and $\vec{w}$ is the \textbf{set of all their linear combinations} $a\vec{v} + b\vec{w}$.
+\end{defbox}
+
+For 3D:
+\[
+a\vec{v} + b\vec{w} + c\vec{u}
+\]
+(let these constants vary)
+
+\paragraph{Linearly Dependent}
+\[
+\vec{v} = a\vec{v} + b\vec{w}
+\]
+$\rightarrow$ One is a scaled version of the other (for some values of $a$ and $b$).
+
+\paragraph{Linearly Independent}
+\[
+\vec{v} \neq a\vec{v} + b\vec{w}
+\]
+(for all values of $a$ and $b$)
+
+\subsection{Technical Definition of Basis}
+\begin{defbox}
+The basis of a vector space is a set of \textbf{linearly independent} vectors that \textbf{span} the full space.
+\end{defbox}
+
+\begin{notebox}
+A vector is a linear combination of the basis vectors.
+\end{notebox}
+
+\subsection*{Related Topics}
+\begin{itemize}[nosep]
+  \item Section~\ref{sec:matrices} --- Matrices
+  \item Section~\ref{sec:determinant} --- Determinant
+\end{itemize}
+
+\bigskip
+\noindent\textit{Tags: linear-algebra, vectors, math, phase-1}
