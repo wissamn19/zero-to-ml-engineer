@@ -2,7 +2,7 @@
 
 #  Zero to ML Engineer
 
-> A structured, self-paced roadmap for going from complete beginner to job-ready Machine Learning Engineer —  
+> A structured, self-paced roadmap for going from complete beginner to job-ready Machine Learning Engineer. 
 > built in public, one topic at a time.
 
 ![Progress](https://img.shields.io/badge/Status-In%20Progress-yellow?style=flat-square)
