@@ -15,7 +15,7 @@
 
 ##  What is this?
 
-This is my personal ML Engineer roadmap — a living repository where I document everything I learn on the journey from **zero** to becoming a **Machine Learning Engineer**.
+This is my personal ML Engineer roadmap, A living repository where I document everything I learn on the journey from **zero** to becoming a **Machine Learning Engineer**.
 
 Every folder is a phase. Every file is a topic. Every resource is something I've personally vetted.
 
@@ -55,8 +55,8 @@ flowchart LR
 
 Every topic folder contains two files:
 
-- **`notes.md`** — my personal summary, key concepts, and understanding written in Obsidian
-- **`resources.md`** — curated list of courses, books, and free resources
+- **`notes.md`** : my personal summary, key concepts, and understanding written in Obsidian
+- **`resources.md`** : curated list of courses, books, and free resources
 
 ---
 
@@ -64,7 +64,7 @@ Every topic folder contains two files:
 
 | Purpose | Tool |
 |---------|------|
-| Note-taking | Obsidian |
+| Note-taking | Obsidian, Jupyter Notebook |
 | Language | Python |
 | ML Libraries | Scikit-learn, PyTorch |
 | Data | NumPy, Pandas, Matplotlib |
