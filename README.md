@@ -15,7 +15,7 @@
 
 ##  What is this?
 
-This is my personal ML Engineer roadmap — a living repository where I document everything I learn on the journey from **zero** to becoming a **Machine Learning Engineer**.
+This is my personal ML Engineer roadmap, A living repository where I document everything I learn on the journey from **zero** to becoming a **Machine Learning Engineer**.
 
 Every folder is a phase. Every file is a topic. Every resource is something I've personally vetted.
 
