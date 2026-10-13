@@ -1,0 +1,238 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[skins]{tcolorbox}
+\usepackage[colorlinks=true,linkcolor=violet!70!black,urlcolor=violet!70!black]{hyperref}
+
+\definecolor{accent}{HTML}{534AB7}
+
+\newtcolorbox{callout}{
+  enhanced, frame hidden, boxrule=0pt, sharp corners,
+  colback=accent!6, borderline west={2.5pt}{0pt}{accent},
+  left=10pt, right=8pt, top=5pt, bottom=5pt, before skip=8pt, after skip=8pt
+}
+
+\setlist[itemize]{itemsep=2pt, topsep=4pt}
+\setlist[enumerate]{itemsep=2pt, topsep=4pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+\title{Topic 11 --- SVD\\[2pt]\large (Singular Value Decomposition)}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\vspace{-2.2em}
+
+\begin{center}
+  \textbf{Subject:} Linear Algebra for ML \quad|\quad
+  \textbf{Status:} growing \quad|\quad
+  \textbf{MOC:} Math
+\end{center}
+
+\hrule
+\vspace{4pt}
+
+\begin{abstract}
+\noindent SVD decomposes any matrix (any shape) into three matrices: $U$, $\Sigma$, $V^T$.
+It can also be written as a sum of rank-one layers sorted by importance.
+The more layers we keep, the better the approximation of $X$.
+\end{abstract}
+
+% ------------------------------------------------------------
+\section{SVD}
+
+\begin{callout}
+The process of \textbf{decomposing a matrix (any shape)} into the \textbf{product of three other matrices}.
+\end{callout}
+
+\[
+  X = U \Sigma V^T
+\]
+
+\begin{itemize}
+  \item $X = \begin{bmatrix} | & | & & | \\ x_1 & x_2 & \cdots & x_m \\ | & | & & | \end{bmatrix}$ = data matrix, with $n \gg m$
+  \item $x_k \in \mathbb{R}^n$ (dimension)
+  \item $U$, $V$ = \textbf{unitary matrices} (orthogonal matrices)
+  \item $\Sigma$ = \textbf{diagonal matrix}
+\end{itemize}
+
+% ------------------------------------------------------------
+\section{Expanded Form}
+
+\[
+  X =
+  \begin{bmatrix} | & | & & | \\ u_1 & u_2 & \cdots & u_m \\ | & | & & | \end{bmatrix}
+  \begin{bmatrix} \sigma_1 & & \\ & \ddots & \\ & & \sigma_m \\ & 0 & \end{bmatrix}
+  \begin{bmatrix} v_1 & v_2 & \cdots & v_m \end{bmatrix}^T
+\]
+
+\begin{itemize}
+  \item $U$ columns $\rightarrow$ \textbf{``eigen'' faces}
+  \item $\Sigma$ $\rightarrow$ \textbf{ordered by importance}
+  \item $V$ $\rightarrow$ \textbf{``eigen'' time series}
+\end{itemize}
+
+% ------------------------------------------------------------
+\section{Unitary Matrices}
+
+$U, V$ = unitary matrices
+
+\[
+  UU^T = U^TU = I_{n \times n} \qquad \text{(transpose)}
+\]
+
+\[
+  VV^T = V^TV = I_{m \times m}
+\]
+
+\begin{callout}
+$V$ has the same property as $U$.
+\end{callout}
+
+% ------------------------------------------------------------
+\section{Naming the Matrices}
+
+Singular values are ordered:
+
+\[
+  \sigma_1 \geq \sigma_2 \geq \sigma_3 \geq \dots \geq \sigma_m \geq 0
+\]
+
+So we call each of these matrices like so:
+
+\[
+  U \qquad \Sigma \qquad V^T
+\]
+
+\begin{itemize}
+  \item $U$ = \textbf{left singular vectors}
+  \item $\Sigma$ = \textbf{singular values}
+  \item $V$ = \textbf{right singular vectors}
+\end{itemize}
+
+% ------------------------------------------------------------
+\section{Geometric View}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\linewidth]{svd-geometry-steps.png}
+  \caption{SVD acts on the unit circle in three steps, shown for
+  $A = \begin{bmatrix} 1.2 & 0.8 \\ 0.2 & 0.9 \end{bmatrix}$
+  ($\sigma_1 \approx 1.61$, $\sigma_2 \approx 0.57$).}
+\end{figure}
+
+SVD = \textbf{rotate $\rightarrow$ stretch $\rightarrow$ rotate}, applied to the unit circle:
+
+\begin{enumerate}
+  \item $V^T$ $\rightarrow$ \textbf{rotate} ($v_1, v_2$ land on the axes)
+  \item $\Sigma$ $\rightarrow$ \textbf{stretch} by $\sigma_1$ and $\sigma_2$ along the axes (circle $\rightarrow$ ellipse)
+  \item $U$ $\rightarrow$ \textbf{rotate} again (the axes land on $u_1, u_2$)
+\end{enumerate}
+
+% ------------------------------------------------------------
+\section{Interpretation of Components}
+
+\begin{itemize}
+  \item $U$ columns have the \textbf{same shape as $X$}, so they can be reshaped (e.g.\ back into images).
+  \item $V^T$ rows $\rightarrow$ \textbf{mixtures of all values to take the $x$'s}:
+\end{itemize}
+
+\[
+  V^T =
+  \begin{bmatrix}
+    \text{---} & v_1^T & \text{---} \\
+    \text{---} & v_2^T & \text{---} \\
+     & \vdots & \\
+    \text{---} & v_m^T & \text{---}
+  \end{bmatrix}
+\]
+
+% ------------------------------------------------------------
+\section{Sum of Rank-One Matrices}
+
+\[
+  X = \sigma_1 u_1 v_1^T + \sigma_2 u_2 v_2^T + \dots + \sigma_m u_m v_m^T + 0
+\]
+
+\[
+  X = U \Sigma V^T = \hat{U} \hat{\Sigma} V^T \quad \rightarrow \quad \text{Economy SVD}
+\]
+
+Each term is a column ($u_i$) times a row ($v_i^T$), scaled by $\sigma_i$:
+
+\[
+  X = \sigma_1 \underbrace{u_1}_{\text{column}} \underbrace{v_1^T}_{\text{row}}
+  + \sigma_2 u_2 v_2^T + \dots
+  + \underbrace{\sigma_r u_r v_r^T}_{\text{truncate at } r}
+  + \dots + \sigma_m u_m v_m^T + 0
+\]
+
+\begin{itemize}
+  \item These rank-one matrices are \textbf{layers that increasingly improve the approximation of $X$}.
+  \item So each $\sigma_i u_i v_i^T$ is a \textbf{simple image}, and the layers are \textbf{sorted by importance} ($\sigma_1, \sigma_2, \dots$).
+\end{itemize}
+
+% ------------------------------------------------------------
+\section{Why More ``Rank-One Matrices'' Gives a Better Image?}
+
+\begin{itemize}
+  \item \textbf{Layer 1} (biggest $\sigma$): captures the broad structure: overall light and dark regions.
+  \item \textbf{Layers 2 to 20}: add the main shapes and edges.
+  \item \textbf{Later layers}: add finer and finer detail.
+  \item \textbf{The last layers}: have tiny $\sigma$ and mostly add noise and texture.
+\end{itemize}
+
+% ------------------------------------------------------------
+\section{The Eckart--Young Theorem (1936)}
+
+\begin{callout}
+The \textbf{best approximation} to the matrix $X$ that has rank $r$.
+\end{callout}
+
+\[
+  \underset{\tilde{X}\ \text{such that}\ \operatorname{rank}(\tilde{X}) = r}{\arg\min}
+  \norm{X - \tilde{X}}_F = \tilde{U} \tilde{\Sigma} \tilde{V}^T
+\]
+
+\begin{itemize}
+  \item $\arg\min$ $\rightarrow$ \textbf{smallest error}
+  \item $F$ $\rightarrow$ \textbf{Frobenius norm}
+\end{itemize}
+
+$\rightarrow$ So the theorem \textbf{guarantees} that the best possible matrix approximation to $X$ of rank $r$ is the \textbf{first $r$ layers}.
+
+% ------------------------------------------------------------
+\section{Unitary Identity After Truncation}
+
+\[
+  \tilde{U}^T \tilde{U} = I_{r \times r}
+\]
+
+\[
+  \tilde{U} \tilde{U}^T \neq I
+\]
+
+\begin{callout}
+It's not an identity anymore.
+\end{callout}
+
+% ------------------------------------------------------------
+
+
+\vspace{6pt}
+\hrule
+\vspace{6pt}
+
+
+
+\end{document}
