@@ -55,7 +55,7 @@ flowchart LR
 
 Every topic folder contains two files:
 
-- **`notes.md`** : my personal summary, key concepts, and understanding written in Obsidian
+- **`notes.md`** : my personal summary, key concepts, and understanding written in Obsidian with LaTeX version
 - **`resources.md`** : curated list of courses, books, and free resources
 
 ---
