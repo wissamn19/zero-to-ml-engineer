@@ -4,11 +4,11 @@
 
 ## Free / Online
 
-- [Essence of calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) — 3Blue1Brown  
-  A visual, intuition-first YouTube series by Grant Sanderson. Doesn't teach computation — teaches you what calculus *means* geometrically. Watch this before or alongside anything else.
+- [Adam Optimizer from scratch](https://youtu.be/XHF2jW_U3iM?si=qTzi63Py19a26l59) — Vizuara  
+  A well deatiled course about SGD(Stochastic gradient descent), momentum, RMSprop and Adam optimizer.
 
-- [Calculus](https://www.khanacademy.org/math/calculus) — Khan Academy  
-  Free, beginner-friendly, and well-paced. Good for building comfort with the mechanics like limits, continuity and more, if you need to go slow and practice.
+- [Optimization: A Bootcamp for Machine Learning](https://youtu.be/lPBPbGmw1_4?si=4HjUc_rACyvmYGo6) — Steve Brunton 
+  Free, beginner-friendly, and well-paced. taking you from understanding why we need optimization in Machine Learning.
 
 
 
