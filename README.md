@@ -65,7 +65,7 @@ Every topic folder contains two files:
 | Purpose | Tool |
 |---------|------|
 | Note-taking | Obsidian, Jupyter Notebook |
-| Language | Python |
+| Language | Python3 |
 | ML Libraries | Scikit-learn, PyTorch |
 | Data | NumPy, Pandas, Matplotlib |
 | Version Control | Git & GitHub |
