@@ -44,7 +44,7 @@ flowchart LR
 | [ 01 - Math](./01-Math/README.md) | Linear Algebra, Statistics, Calculus | 🔄 In Progress |
 |  [02 - Python](./02-Python/README.md) | Data Structures, OOP, NumPy, Pandas | 🔄 In Progress|
 |  03 - SQL | Queries, Joins, Aggregations | 🔄 In Progress |
-|  04 - Machine Learning | Regression, Trees, Clustering, Evaluation | ⬜ Not Started |
+|  04 - Machine Learning | Regression, Trees, Clustering, Evaluation | 🔄 In Progress |
 |  05 - Deep Learning | Neural Networks, CNNs, RNNs, Transformers | ⬜ Not Started |
 |  06 - Software Engineering | DSA, System Design, APIs | ⬜ Not Started |
 |  07 - MLOps | Cloud, Docker, Git & CI/CD | ⬜ Not Started |
